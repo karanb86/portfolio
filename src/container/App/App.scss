@@ -33,4 +33,15 @@
   }
   .header-container {
   }
+
+  @media only screen and(max-width: 960px) {
+    .cursorTrail {
+      display: none;
+    }
+    .menu-container {
+      top: 40px;
+      left: unset;
+      right: 40px;
+    }
+  }
 }

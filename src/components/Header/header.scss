@@ -40,6 +40,13 @@
     }
   }
 
+  @media only screen and(max-width: 960px) {
+    span,
+    .handles {
+      z-index: 0;
+    }
+  }
+
   @media only screen and (max-width: 600px ) {
     span {
       font-size: 1.8rem;
