@@ -1,0 +1,30 @@
+.menu-wrap {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+
+  span {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+    transition: all 0.5s;
+    a {
+      text-decoration: none;
+      color: #f0b090;
+    }
+  }
+
+  span:last-child {
+    margin-bottom: 0;
+  }
+
+  span:hover {
+    letter-spacing: 2px;
+    text-decoration: line-through;
+  }
+  .cursorTrail {
+    height: 20px !important;
+    width: 20px !important;
+  }
+}

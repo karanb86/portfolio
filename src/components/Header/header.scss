@@ -1,0 +1,40 @@
+.header-wrap {
+  span {
+    font-family: 'Rock Salt', cursive;
+    color: #f0b090;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    font-size: 2.5rem;
+    z-index: 3;
+    cursor: context-menu;
+  }
+  .handles {
+    display: flex;
+    width: fit-content;
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    a {
+      margin-right: 15px;
+      color: #f0b090;
+      .handle {
+        height: 35px;
+        width: 35px;
+        transition: all .5s;
+      }
+      .handle:hover {
+        margin: 0 5px;
+        height: 40px;
+        width: 40px;
+        transform: translateY(-10px);
+      }
+    }
+    a:last-child {
+      margin-right: 0;
+    }
+  }
+}

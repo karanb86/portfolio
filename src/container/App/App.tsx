@@ -1,7 +1,8 @@
 import React from 'react';
-import logo from '../../logo.svg';
 import './App.scss';
 import { useState, useEffect } from "react";
+import Menu from "../../components/Menu/menu";
+import Header from "../../components/Header/header";
 
 const useMousePosition = () => {
   const [mousePosition, setMousePosition] = useState({ x: -10, y: -10 });
@@ -20,7 +21,7 @@ const useMousePosition = () => {
 };
 
 const useScrollEvent = () => {
-  const [bgColor, setBgColor] = useState({ r: 0, g: 74, b: 98, cursorColor: '#ffffff'});
+  const [bgColor, setBgColor] = useState({ r: 29, g: 57, b: 61, cursorColor: '#ffffff', menuColor: '#f0b090'});
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -28,15 +29,15 @@ const useScrollEvent = () => {
       const height = window.innerHeight;
 
       if (scrollY > 8*height) {
-        setBgColor({r: 138, g: 169, b: 154, cursorColor: 'rgb(55, 120, 89)'});
+        setBgColor({r: 138, g: 169, b: 154, cursorColor: 'rgb(55, 120, 89)', menuColor: ''});
       } else if (scrollY > 6*height) {
-        setBgColor({r: 214, g: 196, b: 163, cursorColor: 'rgb(199, 153, 68)'});
+        setBgColor({r: 214, g: 196, b: 163, cursorColor: 'rgb(199, 153, 68)', menuColor: ''});
       } else if (scrollY > 4*height) {
-        setBgColor({r: 198, g: 70, b: 14, cursorColor: '#000000'});
+        setBgColor({r: 198, g: 70, b: 14, cursorColor: '#000000', menuColor: ''});
       } else if (scrollY > 2*height) {
-        setBgColor({r: 217, g: 166, b: 141, cursorColor: 'rgb(219, 84, 18)'});
+        setBgColor({r: 217, g: 166, b: 141, cursorColor: 'rgb(219, 84, 18)', menuColor: '#694837'});
       } else {
-        setBgColor({r: 0, g: 74, b: 98, cursorColor: '#ffffff'});
+        setBgColor({r: 29, g: 57, b: 61, cursorColor: '#ffffff', menuColor: '#f0b090'});
       }
     })
   }, []);
@@ -47,7 +48,7 @@ const useScrollEvent = () => {
 function App() {
   const { x, y } = useMousePosition();
 
-  const {r, g, b, cursorColor} = useScrollEvent();
+  const {r, g, b, cursorColor, menuColor} = useScrollEvent();
 
   return (
       <div className="App" id="App" style={{backgroundColor: `rgb(${r}, ${g}, ${b})`}}>
@@ -66,20 +67,13 @@ function App() {
                }
              }>
         </div>
-        {/*<header className="App-header">*/}
-        {/*  <img src={logo} className="App-logo" alt="logo" />*/}
-        {/*  <p>*/}
-        {/*    Edit <code>src/App.tsx</code> and save to reload.*/}
-        {/*  </p>*/}
-        {/*  <a*/}
-        {/*    className="App-link"*/}
-        {/*    href="https://reactjs.org"*/}
-        {/*    target="_blank"*/}
-        {/*    rel="noopener noreferrer"*/}
-        {/*  >*/}
-        {/*    Learn React*/}
-        {/*  </a>*/}
-        {/*</header>*/}
+
+        <div className="menu-container">
+          <Menu color={menuColor} />
+        </div>
+        <div className="header-container">
+          <Header />
+        </div>
       </div>
   );
 }
