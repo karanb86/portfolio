@@ -11,19 +11,46 @@ const Menu = (props: any) => {
         if(!isMenuOpen) {
             setHamClasses(['hamburger-menu', 'open'])
             setMenuClasses(['menu-items', 'menu-open'])
-            console.log(hamClasses, hamClasses.join(' '));
             setIsMenuOpen(true);
         } else {
             setHamClasses(['hamburger-menu']);
             setMenuClasses(['menu-items'])
-            console.log(hamClasses, hamClasses.join(' '));
             setIsMenuOpen(false);
         }
     }
 
     const MenuItems = () => (
         <div className={menuClasses.join(' ')}>
-
+                <span>
+                    <a href=""
+                       style={{
+                           color: props.color
+                       }}>About Me</a>
+                </span>
+                <span>
+                    <a href=""
+                       style={{
+                           color: props.color
+                       }}>My Resume</a>
+                </span>
+                 <span>
+                    <a href=""
+                       style={{
+                           color: props.color
+                       }}>Education</a>
+                </span>
+                <span>
+                    <a href=""
+                       style={{
+                           color: props.color
+                       }}>Skills</a>
+                </span>
+                 <span>
+                    <a href=""
+                       style={{
+                           color: props.color
+                       }}>Services</a>
+                </span>
         </div>
     )
     return (
@@ -61,9 +88,12 @@ const Menu = (props: any) => {
                 </span>
             </div>
 
-            <div className={hamClasses.join(' ')} onClick={onMenuBtnClick}>
-                <div className="menu-btn"></div>
-                <MenuItems />
+            <div className={hamClasses.join(' ')}>
+                <div className="menu-btn" onClick={onMenuBtnClick}></div>
+                {
+                    isMenuOpen ?
+                        <MenuItems /> : ''
+                }
             </div>
         </div>
     );
