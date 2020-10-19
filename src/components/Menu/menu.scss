@@ -1,6 +1,18 @@
 .menu-wrap {
   font-family: 'Roboto', sans-serif;
 
+  img {
+    transform: translateX(-10px);
+    //filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+  }
+  .logo {
+    height: 80px;
+    background-color: #f0b090;
+    transform: translateX(-10px);
+    -webkit-mask: url('../../assets/logos/logo.svg') no-repeat center;
+    mask: url('../../assets/logos/logo.svg') no-repeat center;
+  }
+
   .menu-list {
     display: flex;
     flex-direction: column;

@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import './menu.scss';
+import logo from '../../assets/logos/logo.svg';
+
 const Menu = (props: any) => {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
     const [hamClasses, setHamClasses] = useState<string[]>(['hamburger-menu']);
@@ -21,6 +23,11 @@ const Menu = (props: any) => {
 
     const MenuItems = () => (
         <div className={menuClasses.join(' ')}>
+            <div className="logo" style={{
+                height: '200px',
+                width: '200px',
+                backgroundColor: props.color
+            }}></div>
                 <span>
                     <a href=""
                        style={{
@@ -53,9 +60,13 @@ const Menu = (props: any) => {
                 </span>
         </div>
     )
+    // @ts-ignore
     return (
         <div className="menu-wrap">
             <div className="menu-list">
+                <div className="logo"  style={{
+                    backgroundColor: props.color
+                }}></div>
                 <span>
                     <a href=""
                        style={{
