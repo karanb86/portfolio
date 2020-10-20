@@ -21,45 +21,48 @@ const Menu = (props: any) => {
         }
     }
 
-    const MenuItems = () => (
-        <div className={menuClasses.join(' ')}>
-            <div className="logo" style={{
-                height: '200px',
-                width: '200px',
-                backgroundColor: props.color
-            }}></div>
-                <span>
-                    <a href=""
-                       style={{
-                           color: props.color
-                       }}>About Me</a>
-                </span>
-                <span>
-                    <a href=""
-                       style={{
-                           color: props.color
-                       }}>My Resume</a>
-                </span>
-                 <span>
-                    <a href=""
-                       style={{
-                           color: props.color
-                       }}>Education</a>
-                </span>
-                <span>
-                    <a href=""
-                       style={{
-                           color: props.color
-                       }}>Skills</a>
-                </span>
-                 <span>
-                    <a href=""
-                       style={{
-                           color: props.color
-                       }}>Services</a>
-                </span>
-        </div>
-    )
+    const availableLinks = [
+        {
+        label : 'About Me'
+        },
+        {
+        label : 'My Resume'
+        },
+        {
+        label : 'Education'
+        },
+        {
+        label : 'Skills'
+        },
+        {
+        label : 'Services'
+        },
+        ]
+
+    const ItemsList = availableLinks.map(link => (
+        <span>
+                <a href=""
+                   style={{
+                       color: props.color ? props.color : '#f0b090'
+                   }}>{link.label}</a>
+            </span>
+    ));
+
+    // ******** FOR MOBILE VIEW ********
+    const MenuItems = () => {
+        return (
+            <div className={menuClasses.join(' ')}>
+                <div className="logo" style={{
+                    height: '200px',
+                    width: '200px',
+                    backgroundColor: props.color
+                }}></div>
+                {ItemsList}
+            </div>
+        );
+    }
+
+    // ******** FOR DESKTOP VIEW ********
     // @ts-ignore
     return (
         <div className="menu-wrap">
@@ -67,36 +70,7 @@ const Menu = (props: any) => {
                 <div className="logo"  style={{
                     backgroundColor: props.color
                 }}></div>
-                <span>
-                    <a href=""
-                       style={{
-                           color: props.color
-                       }}>About Me</a>
-                </span>
-                <span>
-                    <a href=""
-                       style={{
-                           color: props.color
-                       }}>My Resume</a>
-                </span>
-                <span>
-                    <a href=""
-                       style={{
-                           color: props.color
-                       }}>Education</a>
-                </span>
-                <span>
-                    <a href=""
-                       style={{
-                           color: props.color
-                       }}>Skills</a>
-                </span>
-                <span>
-                    <a href=""
-                       style={{
-                           color: props.color
-                       }}>Services</a>
-                </span>
+                {ItemsList}
             </div>
 
             <div className={hamClasses.join(' ')}>
