@@ -29,9 +29,6 @@ const Menu = (props: any) => {
         label : 'My Resume'
         },
         {
-        label : 'Education'
-        },
-        {
         label : 'Skills'
         },
         {

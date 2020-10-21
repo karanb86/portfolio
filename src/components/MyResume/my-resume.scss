@@ -1,0 +1,20 @@
+.my-resume-wrap {
+  font-family: 'Courier', serif;
+
+  h1 {
+    text-align: center;
+    color: #e8b297;
+    font-size: 5rem;
+    cursor: context-menu;
+  }
+  @media only screen and(max-width: 680px) {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+  @media only screen and(max-width: 510px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}

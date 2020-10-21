@@ -3,6 +3,8 @@ import './App.scss';
 import { useState, useEffect } from "react";
 import Menu from "../../components/Menu/menu";
 import Header from "../../components/Header/header";
+import AboutMe from "../../components/AboutMe/about-me";
+import MyResume from "../../components/MyResume/my-resume";
 
 const useMousePosition = () => {
   const [mousePosition, setMousePosition] = useState({ x: -10, y: -10 });
@@ -27,15 +29,16 @@ const useScrollEvent = () => {
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
       const height = window.innerHeight;
+      console.log(scrollY, height);
 
       if (scrollY > 8*height) {
         setBgColor({r: 138, g: 169, b: 154, cursorColor: 'rgb(55, 120, 89)', menuColor: ''});
       } else if (scrollY > 6*height) {
         setBgColor({r: 214, g: 196, b: 163, cursorColor: 'rgb(199, 153, 68)', menuColor: ''});
-      } else if (scrollY > 4*height) {
-        setBgColor({r: 198, g: 70, b: 14, cursorColor: '#000000', menuColor: ''});
-      } else if (scrollY > 2*height) {
-        setBgColor({r: 217, g: 166, b: 141, cursorColor: 'rgb(219, 84, 18)', menuColor: '#694837'});
+      } else if (scrollY > 2.92*height) {
+        setBgColor({r: 198, g: 70, b: 14, cursorColor: '#000000', menuColor: '#000000'});
+      } else if (scrollY > 0.75*height) {
+        setBgColor({r: 217, g: 166, b: 141, cursorColor: '#c72617', menuColor: '#bf6542'});
       } else {
         setBgColor({r: 29, g: 57, b: 61, cursorColor: '#ffffff', menuColor: '#f0b090'});
       }
@@ -73,6 +76,12 @@ function App() {
         </div>
         <div className="header-container">
           <Header />
+        </div>
+        <div className="about-me-container">
+          <AboutMe />
+        </div>
+        <div className="my-resume-container">
+          <MyResume />
         </div>
       </div>
   );
