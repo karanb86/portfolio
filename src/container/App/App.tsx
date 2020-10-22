@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { useState, useEffect } from "react";
+import Loader from "../../components/Loader/loader";
 import Menu from "../../components/Menu/menu";
 import Header from "../../components/Header/header";
 import AboutMe from "../../components/AboutMe/about-me";
@@ -52,8 +53,16 @@ function App() {
   const { x, y } = useMousePosition();
 
   const {r, g, b, cursorColor, menuColor} = useScrollEvent();
+  const [landing, setLanding] = useState(true);
+  useEffect(() => {
+      setTimeout(() => {
+          setLanding(false);
+      }, 3000);
+  }, []);
 
-  return (
+    return landing ? (
+          <Loader />
+          ): (
       <div className="App" id="App" style={{backgroundColor: `rgb(${r}, ${g}, ${b})`}}>
         <div className="cursorTrail"
              style={
@@ -70,6 +79,9 @@ function App() {
                }
              }>
         </div>
+
+          <div className="stage-3d top hidden"></div>
+          <div className="stage-3d hidden"></div>
 
         <div className="menu-container">
           <Menu color={menuColor} />
