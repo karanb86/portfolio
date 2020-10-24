@@ -37,12 +37,11 @@ const useScrollEvent = () => {
         setBgColor({r: 138, g: 169, b: 154, cursorColor: 'rgb(55, 120, 89)', menuColor: ''});
       } else if (scrollY > 6*height) {
         setBgColor({r: 214, g: 196, b: 163, cursorColor: 'rgb(199, 153, 68)', menuColor: ''});
-      } else if (scrollY > 2.9*height && width <= 600 ) {
-        setBgColor({r: 198, g: 70, b: 14, cursorColor: '#000000', menuColor: '#000000'});
+      } else if (scrollY > 3*height && width <= 600 ) {
+        setBgColor({r: 255, g: 144, b: 0, cursorColor: '#000000', menuColor: '#000000'});
       } else if (scrollY > 2.2*height && width >= 600) {
-        setBgColor({r: 198, g: 70, b: 14, cursorColor: '#000000', menuColor: '#000000'});
+        setBgColor({r: 255, g: 144, b: 0, cursorColor: '#000000', menuColor: '#000000'});
       } else if (scrollY > 0.75*height) {
-        // setBgColor({r: 217, g: 166, b: 141, cursorColor: '#c72617', menuColor: '#bf6542'});
         setBgColor({r: 242, g: 189, b: 148, cursorColor: '#30110d', menuColor: '#30110d'});
       } else {
         setBgColor({r: 29, g: 57, b: 61, cursorColor: '#ffffff', menuColor: '#f0b090'});
