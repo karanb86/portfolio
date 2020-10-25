@@ -34,7 +34,8 @@
       margin-bottom: 0;
     }
 
-    span:hover {
+    span:hover,
+    span:active {
       letter-spacing: 2px;
       text-decoration: line-through;
     }
