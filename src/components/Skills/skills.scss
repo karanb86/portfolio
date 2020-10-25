@@ -1,0 +1,37 @@
+.skills-wrapper {
+  font-family: 'Courier', serif;
+  h1 {
+    width: fit-content;
+    padding: 0 20px;
+    margin: 0 auto;
+    color: #bf6542;
+    font-size: 5rem;
+    cursor: context-menu;
+  }
+  .skills {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .skill {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      .description {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+  @media only screen and(max-width: 600px) {
+    .skills {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

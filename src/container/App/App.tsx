@@ -6,6 +6,8 @@ import Menu from "../../components/Menu/menu";
 import Header from "../../components/Header/header";
 import AboutMe from "../../components/AboutMe/about-me";
 import MyResume from "../../components/MyResume/my-resume";
+import Skills from "../../components/Skills/skills";
+import GetInTouch from "../../components/GetInTouch/get-in-touch";
 
 const useMousePosition = () => {
   const [mousePosition, setMousePosition] = useState({ x: -10, y: -10 });
@@ -31,18 +33,22 @@ const useScrollEvent = () => {
       const scrollY = window.scrollY;
       const height = window.innerHeight;
       const width = window.innerWidth;
-      console.log(scrollY, height);
+      // console.log(scrollY, height);
 
-      if (scrollY > 8*height) {
-        setBgColor({r: 138, g: 169, b: 154, cursorColor: 'rgb(55, 120, 89)', menuColor: ''});
-      } else if (scrollY > 6*height) {
-        setBgColor({r: 214, g: 196, b: 163, cursorColor: 'rgb(199, 153, 68)', menuColor: ''});
+      if (scrollY > 7.97*height && width <= 600) {
+        setBgColor({r: 138, g: 169, b: 154, cursorColor: '#004a62', menuColor: '#004a62'});
+      }else if (scrollY > 6.127*height && width > 600) {
+        setBgColor({r: 138, g: 169, b: 154, cursorColor: '#004a62', menuColor: '#004a62'});
+      } else if (scrollY > 6.23*height && width <= 600) {
+        setBgColor({r: 214, g: 196, b: 163, cursorColor: '#c72617', menuColor: '#bc6543'});
+      }  else if (scrollY > 4.83*height && width > 600) {
+        setBgColor({r: 214, g: 196, b: 163, cursorColor: '#c72617', menuColor: '#bc6543'});
       } else if (scrollY > 2.8*height && width <= 600 ) {
-        setBgColor({r: 255, g: 144, b: 0, cursorColor: '#000000', menuColor: '#000000'});
-      } else if (scrollY > 2.3*height && width >= 600) {
+        setBgColor({r: 255, g: 144, b: 0, cursorColor: '#000000', menuColor: '#ff9000'});
+      } else if (scrollY > 2.3*height && width > 600) {
         setBgColor({r: 255, g: 144, b: 0, cursorColor: '#000000', menuColor: '#000000'});
       } else if (scrollY > 0.75*height) {
-        setBgColor({r: 242, g: 189, b: 148, cursorColor: '#30110d', menuColor: '#30110d'});
+        setBgColor({r: 242, g: 189, b: 148, cursorColor: '#30110d', menuColor: width > 600 ? '#30110d' : '#f2bd94'});
       } else {
         setBgColor({r: 29, g: 57, b: 61, cursorColor: '#ffffff', menuColor: '#f0b090'});
       }
@@ -59,6 +65,8 @@ function App() {
   const {r, g, b, cursorColor, menuColor} = useScrollEvent();
   const [landing, setLanding] = useState(true);
   const [aboutContClass, setAboutContClass] = useState<string[]>(['about-me-container']);
+  const [resumeContClass, setResumeContClass] = useState<string[]>(['my-resume-container']);
+  const [skillsContClass, setSkillsContClass] = useState<string[]>(['skills-container']);
 
   useEffect(() => {
       setTimeout(() => {
@@ -68,9 +76,13 @@ function App() {
 
   useEffect(() => {
       if(width <= 600) {
-          setAboutContClass(['about-me-container', 'increased-height']);
+          setAboutContClass(['about-me-container', 'increased-height-about']);
+          setResumeContClass(['my-resume-container', 'increased-height-resume']);
+          setSkillsContClass(['skills-container', 'increased-height-skills']);
       } else {
           setAboutContClass(['about-me-container']);
+          setResumeContClass(['my-resume-container']);
+          setSkillsContClass(['skills-container']);
       }
   }, [width]);
 
@@ -103,11 +115,17 @@ function App() {
         <div className="header-container">
           <Header />
         </div>
-        <div className={aboutContClass.join(' ')}>
+        <div className={aboutContClass.join(' ')} id="aboutMe">
           <AboutMe />
         </div>
-        <div className="my-resume-container">
+        <div className={resumeContClass.join(' ')} id="myResume">
           <MyResume />
+        </div>
+        <div className={skillsContClass.join(' ')} id="skills">
+          <Skills />
+        </div>
+        <div className="get-in-touch-container" id="getInTouch">
+          <GetInTouch />
         </div>
       </div>
   );

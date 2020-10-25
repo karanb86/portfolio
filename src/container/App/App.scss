@@ -1,5 +1,5 @@
 .App {
-  height: 1000vh;
+  //height: 1000vh;
   overflow: hidden !important;
   //background: linear-gradient(to top, rgb(217, 166, 141), rgb(24, 19, 16), rgb(191, 101, 66), rgb(0, 74, 98));
   transition: all 350ms ease-out;
@@ -58,12 +58,22 @@
     margin: 0 auto;
     height: 170vh;
   }
-  .increased-height {
+  .increased-height-about {
     height: 220vh !important;
   }
   .my-resume-container {
     width: calc(100% - 400px);
     margin: 0 auto;
+    height: 250vh;
+  }
+  .increased-height-resume {
+    height: 330vh;
+  }
+  .skills-container {
+    height: 130vh;
+  }
+  .increased-height-skills {
+    height: 186vh;
   }
 
   @media only screen and(max-width: 960px) {

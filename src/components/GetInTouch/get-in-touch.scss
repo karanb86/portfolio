@@ -1,0 +1,27 @@
+.get-in-touch-wrapper {
+  height: 50vh;
+  background-color: #004a62;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: white;
+    color: #004a62;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    z-index: 3;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Courier', serif;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    &:focus {
+      outline: none;
+    }
+  }
+}
