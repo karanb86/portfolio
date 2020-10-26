@@ -40,7 +40,7 @@ const useScrollEvent = () => {
       }else if (scrollY > 5.4*height && width > 600) {
         setBgColor({r: 138, g: 169, b: 154, cursorColor: '#004a62', menuColor: '#004a62'});
       } else if (scrollY > 4.85*height && width <= 600) {
-        setBgColor({r: 133, g: 23, b: 25, cursorColor: '#ffffff', menuColor: '#ffffff'});
+        setBgColor({r: 133, g: 23, b: 25, cursorColor: '#daa520', menuColor: '#daa520'});
       }  else if (scrollY > 4*height && width > 600) {
         setBgColor({r: 133, g: 23, b: 25, cursorColor: '#daa520', menuColor: '#daa520'});
       } else if (scrollY > 2.45*height && width <= 600 ) {

@@ -60,8 +60,8 @@ const Menu = (props: any) => {
                 <div className="logo"
                      onClick={goToTop}
                      style={{
-                    height: '200px',
-                    width: '200px',
+                    height: '120px',
+                    width: '120px',
                     cursor: 'pointer',
                     backgroundColor: props.color
                 }}></div>
