@@ -51,27 +51,28 @@
     z-index: 4;
   }
   .header-container {
-    height: 130vh;
+    height: 110vh;
+    margin-bottom: 120px;
   }
   .about-me-container {
     width: calc(100% - 400px);
-    margin: 0 auto;
-    height: 150vh;
+    margin: 0 auto 120px auto;
+    height: 130vh;
   }
   .increased-height-about {
-    height: 180vh !important;
+    height: 160vh !important;
   }
   .my-resume-container {
     width: calc(100% - 400px);
-    margin: 0 auto;
+    margin: 0 auto 120px auto;
     height: 220vh;
   }
   .increased-height-resume {
-    height: 260vh;
+    height: 270vh;
   }
   .skills-container {
     width: calc(100% - 400px);
-    margin: 0 auto;
+    margin: 0 auto 120px auto;
     height: 130vh;
   }
   .increased-height-skills {
