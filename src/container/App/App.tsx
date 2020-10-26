@@ -35,19 +35,19 @@ const useScrollEvent = () => {
       const width = window.innerWidth;
       // console.log(scrollY, height);
 
-      if (scrollY > 7.97*height && width <= 600) {
+      if (scrollY > 8*height && width <= 600) {
         setBgColor({r: 138, g: 169, b: 154, cursorColor: '#004a62', menuColor: '#004a62'});
-      }else if (scrollY > 6.127*height && width > 600) {
+      }else if (scrollY > 5.4*height && width > 600) {
         setBgColor({r: 138, g: 169, b: 154, cursorColor: '#004a62', menuColor: '#004a62'});
-      } else if (scrollY > 6.23*height && width <= 600) {
-        setBgColor({r: 214, g: 196, b: 163, cursorColor: '#c72617', menuColor: '#bc6543'});
-      }  else if (scrollY > 4.83*height && width > 600) {
-        setBgColor({r: 214, g: 196, b: 163, cursorColor: '#c72617', menuColor: '#bc6543'});
-      } else if (scrollY > 2.8*height && width <= 600 ) {
+      } else if (scrollY > 4.85*height && width <= 600) {
+        setBgColor({r: 133, g: 23, b: 25, cursorColor: '#ffffff', menuColor: '#ffffff'});
+      }  else if (scrollY > 4*height && width > 600) {
+        setBgColor({r: 133, g: 23, b: 25, cursorColor: '#daa520', menuColor: '#daa520'});
+      } else if (scrollY > 2.45*height && width <= 600 ) {
         setBgColor({r: 255, g: 144, b: 0, cursorColor: '#000000', menuColor: '#ff9000'});
-      } else if (scrollY > 2.3*height && width > 600) {
+      } else if (scrollY > 2.1*height && width > 600) {
         setBgColor({r: 255, g: 144, b: 0, cursorColor: '#000000', menuColor: '#000000'});
-      } else if (scrollY > 0.75*height) {
+      } else if (scrollY > 0.5*height) {
         setBgColor({r: 242, g: 189, b: 148, cursorColor: '#30110d', menuColor: width > 600 ? '#30110d' : '#f2bd94'});
       } else {
         setBgColor({r: 29, g: 57, b: 61, cursorColor: '#ffffff', menuColor: '#f0b090'});

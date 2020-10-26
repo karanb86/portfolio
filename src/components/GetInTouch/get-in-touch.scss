@@ -4,7 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  font-family: 'Courier', serif;
+  flex-direction: column;
+  color: white;
+  text-transform: uppercase;
   button {
     padding: 10px 20px;
     border-radius: 30px;
