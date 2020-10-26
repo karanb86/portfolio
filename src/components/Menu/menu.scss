@@ -18,27 +18,27 @@
     display: flex;
     flex-direction: column;
     span {
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: -0.5px;
-      cursor: pointer;
-      transition: all 0.5s;
-
-      a {
-        text-decoration: none;
-        color: #f0b090;
-      }
+      //margin-bottom: 10px;
+      //text-transform: uppercase;
+      //letter-spacing: -0.5px;
+      //cursor: pointer;
+      //transition: all 0.5s;
+      //
+      //a {
+      //  text-decoration: none;
+      //  color: #f0b090;
+      //}
     }
 
-    span:last-child {
-      margin-bottom: 0;
-    }
-
-    span:hover,
-    span:active {
-      letter-spacing: 2px;
-      text-decoration: line-through;
-    }
+    //span:last-child {
+    //  margin-bottom: 0;
+    //}
+    //
+    //span:hover,
+    //span:active {
+    //  letter-spacing: 2px;
+    //  text-decoration: line-through;
+    //}
 
     .cursorTrail {
       height: 20px !important;
@@ -140,5 +140,32 @@
     .hamburger-menu {
       display: flex;
     }
+  }
+  .menu-list-item {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    a {
+      text-decoration: none;
+      color: #f0b090;
+    }
+  }
+  .menu-list-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .menu-list-item:hover,
+  .menu-list-item:active {
+    letter-spacing: 2px;
+    text-decoration: line-through;
+  }
+
+  .selected {
+    letter-spacing: 2px;
+    text-decoration: line-through;
+    cursor: default;
   }
 }
