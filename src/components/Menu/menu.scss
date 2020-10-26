@@ -166,6 +166,8 @@
   .selected {
     letter-spacing: 2px;
     text-decoration: line-through;
-    cursor: default;
+    a {
+      cursor: default;
+    }
   }
 }
