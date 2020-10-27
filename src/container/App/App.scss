@@ -51,32 +51,39 @@
     z-index: 4;
   }
   .header-container {
-    height: 110vh;
+    min-height: 110vh;
+    height: fit-content;
     margin-bottom: 120px;
   }
   .about-me-container {
     width: calc(100% - 400px);
     margin: 0 auto 120px auto;
-    height: 150vh;
+    min-height: 150vh;
+    height: fit-content;
   }
   .increased-height-about {
-    height: 180vh !important;
+    min-height: 180vh !important;
+    height: fit-content;
   }
   .my-resume-container {
     width: calc(100% - 400px);
     margin: 0 auto 120px auto;
-    height: 220vh;
+    min-height: 220vh;
+    height: fit-content;
   }
   .increased-height-resume {
-    height: 270vh;
+    min-height: 270vh;
+    height: fit-content;
   }
   .skills-container {
     width: calc(100% - 400px);
     margin: 0 auto 120px auto;
-    height: 130vh;
+    min-height: 130vh;
+    height: fit-content;
   }
   .increased-height-skills {
-    height: 315vh;
+    min-height: 315vh;
+    height: fit-content;
   }
 
   @media only screen and(max-width: 960px) {
@@ -92,7 +99,6 @@
     .my-resume-container,
     .skills-container {
       width: calc(100% - 200px);
-      margin: 0 auto;
     }
   }
 
@@ -100,7 +106,6 @@
     .about-me-container,
     .my-resume-container {
       width: calc(100% - 60px);
-      margin: 0 auto;
     }
   }
 }
