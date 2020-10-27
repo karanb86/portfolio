@@ -49,4 +49,9 @@
       font-size: 1.785rem;
     }
   }
+  @media only screen and (max-width: 362px ) {
+    span {
+      font-size: 1.5rem;
+    }
+  }
 }

@@ -104,7 +104,8 @@
 
   @media only screen and(max-width: 600px) {
     .about-me-container,
-    .my-resume-container {
+    .my-resume-container,
+    .skills-container {
       width: calc(100% - 60px);
     }
   }
