@@ -113,9 +113,6 @@ function App() {
              }>
         </div>
 
-          <div className="stage-3d top hidden"></div>
-          <div className="stage-3d hidden"></div>
-
         <div className="menu-container">
           <Menu color={menuColor} currentSection={currentSection} />
         </div>
