@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/karanb86.github.io/static/css/main.0efded16.chunk.css",
+    "main.js": "/karanb86.github.io/static/js/main.ce5d4dfa.chunk.js",
+    "main.js.map": "/karanb86.github.io/static/js/main.ce5d4dfa.chunk.js.map",
+    "runtime-main.js": "/karanb86.github.io/static/js/runtime-main.1d606f0f.js",
+    "runtime-main.js.map": "/karanb86.github.io/static/js/runtime-main.1d606f0f.js.map",
+    "static/js/2.f848e824.chunk.js": "/karanb86.github.io/static/js/2.f848e824.chunk.js",
+    "static/js/2.f848e824.chunk.js.map": "/karanb86.github.io/static/js/2.f848e824.chunk.js.map",
+    "index.html": "/karanb86.github.io/index.html",
+    "precache-manifest.fe9eecb2a5ec15220f3a67271c3ffd29.js": "/karanb86.github.io/precache-manifest.fe9eecb2a5ec15220f3a67271c3ffd29.js",
+    "service-worker.js": "/karanb86.github.io/service-worker.js",
+    "static/css/main.0efded16.chunk.css.map": "/karanb86.github.io/static/css/main.0efded16.chunk.css.map",
+    "static/js/2.f848e824.chunk.js.LICENSE.txt": "/karanb86.github.io/static/js/2.f848e824.chunk.js.LICENSE.txt",
+    "static/media/menu.scss": "/karanb86.github.io/static/media/logo.ee76b9d2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1d606f0f.js",
+    "static/js/2.f848e824.chunk.js",
+    "static/css/main.0efded16.chunk.css",
+    "static/js/main.ce5d4dfa.chunk.js"
+  ]
+}
